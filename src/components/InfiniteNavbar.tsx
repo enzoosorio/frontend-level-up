@@ -8,7 +8,7 @@ type Message = {
   anchorText?: string;
 };
 
-export const InfiniteNavbar = () => {
+export const InfiniteNavbarr = () => {
     const messages: Message[] = [
       {
         id: 1,
@@ -29,8 +29,9 @@ export const InfiniteNavbar = () => {
     return (
       // falta el atributo containerInfinite
       <div className="flex flex-row items-center ">
+        
         {/* Duplicamos los mensajes para el efecto continuo */}
-        <div className="flex flex-row items-center justify-around gap-20 min-w-full  ">
+        {/* <div className="flex flex-row items-center justify-around gap-20 min-w-full  ">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -44,8 +45,8 @@ export const InfiniteNavbar = () => {
               )}
             </div>
           ))}
-        </div>
-        <div className="flex flex-row items-center justify-around gap-20 min-w-full bg-amber-300 ">
+        </div> */}
+        {/* <div className="flex flex-row items-center justify-around gap-20 min-w-full bg-amber-300 ">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -59,7 +60,7 @@ export const InfiniteNavbar = () => {
               )}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     );
   };

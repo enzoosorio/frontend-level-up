@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Aboreto, Manrope, Poppins, Amiko } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/src/components/Hero/Footer";
 
 export const aboreto = Aboreto({
   weight: "400",
@@ -39,9 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} antialiased `}
-      >
+        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} antialiased overflow-x-hidden `}
+      >        
         {children}
+        <Footer/>
       </body>
     </html>
   );
