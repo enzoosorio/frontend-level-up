@@ -27,40 +27,17 @@ export const InfiniteNavbarr = () => {
     ];
   
     return (
-      // falta el atributo containerInfinite
-      <div className="flex flex-row items-center ">
-        
-        {/* Duplicamos los mensajes para el efecto continuo */}
-        {/* <div className="flex flex-row items-center justify-around gap-20 min-w-full  ">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className="flex flex-row items-center justify-center p-4 bg-amber-200"
-            >
-              <p className="text-base font-manrope">{message.text}</p>
-              {message.link && (
-                <a href={message.link} className="ml-1 text-lg inline-block">
-                  {message.anchorText}
-                </a>
-              )}
-            </div>
-          ))}
-        </div> */}
-        {/* <div className="flex flex-row items-center justify-around gap-20 min-w-full bg-amber-300 ">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className="flex flex-row items-center justify-center p-4 bg-amber-200"
-            >
-              <p className="text-base">{message.text}</p>
-              {message.link && (
-                <Link href={message.link} className="ml-1 text-lg inline-block font-semibold">
-                  {message.anchorText}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div> */}
+      <div className="carousel font-manrope">
+      <div className="group">
+        <div className="card">Dale una segunda oportunidad a las prendas que no usas</div>
+        <div className="card">Seguimos con el mismo foco para cualquier venta: Ayudar a que renueves tu closet</div>
+        <div className="card">ENVIO GRATIS SOLO POR HOY</div>
       </div>
+      <div aria-hidden className="group">
+        <div className="card">Dale una segunda oportunidad a las prendas que no usas</div>
+        <div className="card">Seguimos con el mismo foco para cualquier venta: Ayudar a que renueves tu closet</div>
+        <div className="card">ENVIO GRATIS SOLO POR HOY</div>
+      </div>
+    </div>
     );
   };

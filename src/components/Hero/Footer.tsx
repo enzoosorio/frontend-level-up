@@ -20,15 +20,16 @@ export const Footer = () => {
             </linearGradient>
             </defs>
         </svg>
-        <div className='flex items-center justify-around gap-2 w-full px-2 bg-green-100/40 min-h-[200px]'>
-            <div className='flex items-center justify-around gap-20 h-[270px] '>
+        <div className='flex items-center justify-around gap-2 w-full px-2 bg-green-100/40 min-h-[200px] py-4'>
+            <div className='flex items-center justify-around gap-10 md:gap-32 lg:gap-8 h-[270px] '>
                 <ColumnForFooter sectionTitle='Ayuda' miniSections={ayudaSection}/>
                 <ColumnForFooter sectionTitle='Legal y privacidad' miniSections={legalidadSection}/>
                 <ColumnForFooter sectionTitle='Nosotros' miniSections={nosotrosSection}/>
             </div>
-            <div className='flex flex-col items-start justify-start bg-amber-300 gap-4 max-w-[40ch]'>
-                <h2 className='text-xl lg:text-3xl font-semibold uppercase font-manrope tracking-wider'>Inicia sesión</h2>
-                <div className='flex flex-col gap-4 text-lg font-manrope items-start justify-start'>
+            {/* iniciar sesion parte */}
+            <div className='hidden lg:flex flex-col items-start justify-center gap-4 max-w-[40ch]'>
+                <h2 className='text-xl lg:text-2xl font-semibold uppercase font-manrope tracking-wider'>Inicia sesión</h2>
+                <div className='flex flex-col gap-4 text-base font-manrope items-start justify-start'>
                     <p>Obten promociones exclusivas, cupones y enterate de nuevos eventos.</p>
                     <form className='flex items-center justify-center '>
                         <input

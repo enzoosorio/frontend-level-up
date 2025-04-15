@@ -1,14 +1,21 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import { OverlayNavbar } from './OverlayNavbar'
 
 export const Navbar = () => {
 
+    const [toggleHamburger, setToggleHamburger] = useState(false)
 
   return (
+    <>
     <nav className='flex items-center justify-around w-full  gap-64  '>
         <div className='flex items-center justify-center gap-8'>   
              {/* hamburger menu */}
-        <svg width="40" height="40" viewBox="0 0 509 307" fill="none" className='cursor-pointer hover:scale-110 transition-transform'>
+        <svg width="40" height="40" viewBox="0 0 509 307" 
+        onClick={() => setToggleHamburger(!toggleHamburger)}
+        fill="none" 
+        className='cursor-pointer hover:scale-110 transition-transform'>
             <path d="M29.7778 42.8889H474.222" stroke="black" strokeWidth="22.2222" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M29.7778 154H474.222" stroke="black" strokeWidth="22.2222" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M29.7778 265.111H474.222" stroke="black" strokeWidth="22.2222" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -40,5 +47,7 @@ export const Navbar = () => {
             </svg>
         </div>
     </nav>
+    {toggleHamburger && <OverlayNavbar setToggleHamburger={setToggleHamburger}/>}
+    </>
   )
 }
