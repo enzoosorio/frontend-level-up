@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   return (
     <>
-    <nav className='flex items-center justify-around w-full  gap-64  '>
+    <nav className='items-center justify-around w-full hidden md:flex md:gap-24 xl:gap-64  '>
         <div className='flex items-center justify-center gap-8'>   
              {/* hamburger menu */}
         <svg width="40" height="40" viewBox="0 0 509 307" 

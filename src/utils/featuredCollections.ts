@@ -41,9 +41,4 @@ export const featuredCollections : CardFeaturedCollectionsForList[] = [
         colSpan : "col-span-4",
         textSpan : "right",
     },
-
-    // {
-    //     id: 2,
-    //     imageSrc: "/Hero/images/ropa-deportiva2.avif",
-    // }
 ]
