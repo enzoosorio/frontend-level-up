@@ -3,7 +3,7 @@ import { CardFeaturedCollectionsForList } from "../types/Hero/cardFeaturedCollec
 export const featuredCollections : CardFeaturedCollectionsForList[] = [
     {
         id: 1,
-        imageSrc: "/Hero/images/sport-2.avif",
+        imageSrc: "/Hero/images/nike-ropa-deportiva.avif",
         imageWidth: 540,
         imageHeight: 450,
         imageAlt: "Ropa deportiva",
@@ -33,7 +33,7 @@ export const featuredCollections : CardFeaturedCollectionsForList[] = [
     },
     {
         id : 4,
-        imageSrc: "/Hero/images/brand-new.avif",
+        imageSrc: "/Hero/images/levis-con-tag.avif",
         imageWidth: 540,
         imageHeight: 450,
         imageAlt: "Totalmente nuevo",

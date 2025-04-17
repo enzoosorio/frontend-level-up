@@ -11,13 +11,13 @@ export const FeaturedCollections = () => {
           Colecciones destacadas
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-8 w-full mt-4">
+      <div className="grid grid-cols-1 md:flex flex-row items-center justify-center gap-4 lg:gap-8 w-full mt-4">
         {featuredCollections.map((collection) => (
           <CardFeaturedCollections
             key={collection.id}
             primaryText={collection.primaryText}
-            colSpan={collection.colSpan} // Columna para pantallas grandes
-            colSpanMobile={collection.colSpanMobile} // Columna para móviles
+            colSpan={collection.colSpan} 
+            colSpanMobile={collection.colSpanMobile}
             textSpan={collection.textSpan}
             bgColor={collection.bgColor}
             imageSrc={collection.imageSrc}

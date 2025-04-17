@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import { ColumnForFooter } from './ColumnForFooter'
 import { ayudaSection, legalidadSection, nosotrosSection } from '@/src/utils/columnForFooter'
@@ -20,7 +19,7 @@ export const Footer = () => {
             </linearGradient>
             </defs>
         </svg>
-        <div className='flex items-center justify-around gap-2 w-full px-2 bg-green-100/40 min-h-[200px] py-4'>
+        <div className='flex items-center justify-around gap-2 w-full px-2 bg-green-100/10 min-h-[200px] py-4'>
             <div className='flex items-center justify-around gap-10 md:gap-32 lg:gap-8 h-[270px] '>
                 <ColumnForFooter sectionTitle='Ayuda' miniSections={ayudaSection}/>
                 <ColumnForFooter sectionTitle='Legal y privacidad' miniSections={legalidadSection}/>

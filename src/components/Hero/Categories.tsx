@@ -2,7 +2,6 @@
 import React from 'react'
 import { SectionBlank } from '@/src/components/reusable/SectionBlank'
 import { categoriesHero } from '@/src/utils/categories'
-import Image from 'next/image'
 import { ButtonCTA } from '../reusable/ButtonCTA'
 
 type DisplayMode = "sm" | "md" | "lg" | "xl"
@@ -10,7 +9,6 @@ export const Categories = () => {
 
   const [displayMode, setDisplayMode] = React.useState<DisplayMode>("sm")
   const [categoriesToShow, setCategoriesToShow] = React.useState(3)
-  const [showButton, setShowButton] = React.useState(false)
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -37,9 +35,6 @@ export const Categories = () => {
     }
   }, [])
 
-  React.useEffect(() => {
-    setShowButton(categoriesToShow !== categoriesHero.length)
-  }, [categoriesToShow])
 
   return (
     <SectionBlank className='pb-20'>
