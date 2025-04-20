@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} antialiased `}
+        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} antialiased overflow-x-hidden `}
       >
         {children}
         <Footer />

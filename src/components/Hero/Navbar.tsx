@@ -4,15 +4,17 @@ import React, { useState } from "react";
 import { OverlayNavbar } from "./OverlayNavbar";
 import { LogoLevelUp } from "../reusable/Hero/LogoLevelUp";
 import { SearchBarSectionForNavbar } from "./SearchBarSectionForNavbar";
+import { CarritoAside } from "../reusable/CarritoAside";
 
 export const Navbar = () => {
   const [toggleHamburger, setToggleHamburger] = useState(false);
   const [showSearchBarSection, setShowSearchBarSection] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <>
-      <nav className="relative items-center justify-around w-full hidden md:flex md:gap-24 xl:gap-64  ">
-        <div className="flex items-center justify-center gap-8">
+      <nav className="relative items-center justify-around h-[116px] md:h-auto w-full flex gap-8 md:gap-24 xl:gap-64  ">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
           {/* hamburger menu */}
           <svg
             width="40"
@@ -48,24 +50,18 @@ export const Navbar = () => {
             />
           </svg>
           <Link
-            className="underline decoration-dotted text-lg font-manrope"
+            className="underline decoration-dotted text-lg font-manrope hover:font-bold transition-all"
             href={"/sell"}
           >
             Vender
           </Link>
         </div>
         {/* LOGO */}
-        <div className="w-9 h-24 bg-transparent" />
         <LogoLevelUp
-          className={`absolute transition-all duration-300 ease-in-out transform ${
-            showSearchBarSection
-              ? "left-14 top-[35%] z-20"
-              : "left-1/2 -translate-x-1/2 top-0"
-          }`}
+          className={` transition-all duration-300 ease-in-out transform`}
         />
-        <div className="relative flex items-center justify-center gap-6">
+        <div className="relative flex items-center justify-center flex-wrap gap-4 gap-x-6  md:gap-6 w-28 md:w-max ">
           {/* contenedor que simula el espacio de la lupa */}
-          <div className="w-8 h-8 bg-transparent"></div>
           {/* lupa */}
           <svg
             width="32"
@@ -106,6 +102,10 @@ export const Navbar = () => {
             viewBox="0 0 543 505"
             fill="none"
             className="hover:scale-110 transition-transform cursor-pointer duration-75"
+            onClick={() => {
+              setShowCart(!showCart)
+              document.body.style.overflow = "hidden"
+            }}
           >
             <path
               d="M209.775 478.475C194.75 478.475 180.75 472.887 170.387 462.725C157.25 449.875 151.637 430.3 155.737 411.637C159.625 393.937 171.3 380.412 187.775 374.537C210.312 366.5 235.075 372.787 250.062 389.962C260.712 402.175 265.525 418.65 263.275 435.187C259.837 460.275 237.337 478.475 209.775 478.475ZM208.075 395.962C204.15 395.962 200.137 396.675 196.175 398.087C184.975 402.087 181.325 411.65 180.15 417C177.887 427.312 180.85 437.987 187.862 444.862C193.537 450.425 201.325 453.475 209.775 453.475C222.575 453.475 236.562 446.025 238.5 431.8C239.8 422.287 237.212 413.262 231.237 406.4C225.437 399.762 217 395.962 208.075 395.962Z"
@@ -128,6 +128,7 @@ export const Navbar = () => {
       {toggleHamburger && (
         <OverlayNavbar setToggleHamburger={setToggleHamburger} />
       )}
+      <CarritoAside active={showCart} setActive={setShowCart}/>
       
     </>
   );

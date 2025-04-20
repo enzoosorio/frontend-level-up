@@ -11,6 +11,7 @@
   --color-primary-green : #3E9276;
   --color-bg-color: #F6F6F6;
   --color-placeholder : #898181;
+  --color-gray-secondary : #DCDCDC;
 }
 
 .containerInfinite {
@@ -117,3 +118,7 @@
     
   }
 
+
+.cardBackground {
+  background: linear-gradient(180deg, #FCFCFC 0%, #E3E3E3 92%, rgba(193, 193, 193, 50%) 100%);
+}

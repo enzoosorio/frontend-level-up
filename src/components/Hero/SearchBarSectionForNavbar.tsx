@@ -1,6 +1,7 @@
 import React from "react";
 import { SearchBar } from "../reusable/Hero/SearchBar";
 import Link from "next/link";
+import { LogoLevelUp } from "../reusable/Hero/LogoLevelUp";
 
 interface SearchBarSectionForNavbarProps {
   setShowSearchBarSection: React.Dispatch<React.SetStateAction<boolean>>;
@@ -38,11 +39,12 @@ export const SearchBarSectionForNavbar = ({
 
   return (
     <>
-    <header className="absolute top-0 left-0 right-0 z-10 flex flex-col items-center bg-bg-color justify-center pt-4 gap-16 w-full min-h-[550px]">
+    <header className="absolute top-0 left-0 right-0 z-10 flex flex-col items-center bg-bg-color justify-center pt-12 md:pt-0 gap-12 w-full min-h-[600px]">
       {/* Simulador del tamaño del logo*/}
-      <div className="w-full h-max flex flex-items-start justify-around">
-        <div className="w-9 h-auto bg-transparent" />
-        <div className="flex items-center justify-center gap-4">
+      <div className="w-full h-max flex flex-items-start justify-center gap-6 md:gap-20">
+        {/* <div className="w-9 h-auto hidden md:block  " /> */}
+        <LogoLevelUp className="hidden md:block" />
+        <div className="flex items-center justify-center gap-4  ">
           <SearchBar />
           <svg
             width="38"
@@ -60,7 +62,7 @@ export const SearchBarSectionForNavbar = ({
         </div>
         <div className="flex items-center justify-center gap-12 ">
           <button
-            className="underline decoration-dotted text-lg font-manrope cursor-pointer hover:font-bold transition-all"
+            className="hidden md:block underline decoration-dotted text-lg font-manrope cursor-pointer hover:font-bold transition-all"
             onClick={() => {
                 setShowSearchBarSection(false)
                 document.body.style.overflow = "auto"
@@ -68,6 +70,16 @@ export const SearchBarSectionForNavbar = ({
             type="button"
           >
             Cancelar
+          </button>
+          <button
+            className="block md:hidden absolute top-4 left-1/2 -translate-x-1/2 text-xl font-manrope cursor-pointer hover:font-bold transition-all py-2 px-4 bg-primary-green text-white rounded-full"
+            onClick={() => {
+                setShowSearchBarSection(false)
+                document.body.style.overflow = "auto"
+            }}
+            type="button"
+          >
+            X
           </button>
         </div>
       </div>
@@ -83,45 +95,13 @@ export const SearchBarSectionForNavbar = ({
                  >
                     <Link
                       href={searchOption.link}
-                      className=" text-lg font-manrope bg-gray-200 hover:bg-gray-300 md:w-[120px] lg:w-[200px] shadow-xl rounded-lg px-2 py-1 mx-auto group-hover/liOption:text-xl transition-all text-center"
+                      className=" text-lg font-manrope bg-gray-200 hover:bg-gray-300 w-[170px] lg:w-[200px] shadow-xl rounded-lg px-2 py-1 mx-auto group-hover/liOption:text-xl transition-all text-center"
                     >
                       {searchOption.name}
                     </Link>
 
                 </li>
             ))}
-          {/* <li >
-            <Link
-              href={"/"}
-              className=" text-lg font-manrope"
-            >
-              PS5
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={"/"}
-              className=" text-lg font-manrope"
-            >
-              PS4
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={"/"}
-              className=" text-lg font-manrope"
-            >
-              PS3
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={"/"}
-              className=" text-lg font-manrope"
-            >
-              Xbox
-            </Link>
-          </li> */}
         </ul>
       </div>
     </header>
