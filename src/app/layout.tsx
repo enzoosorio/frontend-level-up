@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Aboreto, Manrope, Poppins, Amiko } from "next/font/google";
+import { Aboreto, Manrope, Poppins, Amiko, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/src/components/Hero/Footer";
 
@@ -28,6 +28,12 @@ const amiko = Amiko({
   variable: "--font-amiko",
 });
 
+const roboto_mono = Roboto_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+})
+
 // Metadata sin incluir las fuentes
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -42,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} antialiased overflow-x-hidden `}
+        className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} ${roboto_mono.variable} antialiased overflow-x-hidden `}
       >
         {children}
         <Footer />

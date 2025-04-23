@@ -189,8 +189,8 @@ export const CarritoAside = ({ active, setActive }: CarritoAsideProps) => {
                 />
                 <path
                   id="Shape"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M40.6404 22.2299V22.5699H40.5804V22.2299H40.4404V22.1599H40.7904V22.2299H40.6404ZM41.3204 22.1599V22.5699H41.2504V22.2599L41.1404 22.5299H41.0604L40.9404 22.2599V22.5699H40.8704V22.1599H40.9704L41.1004 22.4499L41.2204 22.1599H41.3204Z"
                   fill="#F69E1E"
                 />
@@ -221,8 +221,8 @@ export const CarritoAside = ({ active, setActive }: CarritoAsideProps) => {
               />
               <path
                 id="visa-logo"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M30.8502 17.67C30.8563 16.1452 29.5988 15.4867 28.6229 14.9756C28.0051 14.6521 27.5002 14.3876 27.5002 14C27.5002 13.67 27.8202 13.32 28.5002 13.23C29.3095 13.1499 30.1253 13.2916 30.8602 13.64L31.2802 11.64C30.5638 11.3713 29.8053 11.2325 29.0402 11.23C26.6802 11.23 25.0402 12.49 25.0402 14.29C25.0402 15.62 26.2302 16.36 27.1302 16.8C28.0302 17.24 28.3802 17.55 28.3702 17.95C28.3702 18.57 27.6302 18.85 26.9402 18.86C26.089 18.8709 25.2492 18.6644 24.5002 18.26L24.0702 20.26C24.9176 20.5908 25.8204 20.7571 26.7302 20.75C29.2402 20.75 30.8902 19.51 30.9002 17.59L30.8502 17.67ZM24.3602 11.39L22.3602 20.64H19.9602L21.9602 11.39H24.3602ZM34.4202 17.39L35.6802 13.92L36.4102 17.39H34.4202ZM39.3102 20.67H37.0902L36.8002 19.29H33.7902L33.3002 20.67H30.7802L34.3702 12.1C34.5357 11.6922 34.9301 11.424 35.3702 11.42H37.3702L39.3102 20.67ZM17.1102 20.61L20.9902 11.36H18.3902L15.9002 17.65L14.9002 12.3C14.8116 11.7563 14.341 11.3577 13.7902 11.36H9.72016L9.66016 11.63C10.4765 11.7897 11.2694 12.0518 12.0202 12.41C12.3399 12.5603 12.5566 12.8682 12.5902 13.22L14.5002 20.61H17.1102Z"
                 fill="white"
               />
@@ -247,8 +247,8 @@ export const CarritoAside = ({ active, setActive }: CarritoAsideProps) => {
               />
               <path
                 id="card_bg-2"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M4.5 0H44.5C46.7091 0 48.5 1.79086 48.5 4V28C48.5 30.2091 46.7091 32 44.5 32H4.5C2.29086 32 0.5 30.2091 0.5 28V4C0.5 1.79086 2.29086 0 4.5 0ZM46.5 4C46.5 2.89543 45.6046 2 44.5 2H4.5C3.39543 2 2.5 2.89543 2.5 4V28C2.5 29.1046 3.39543 30 4.5 30H44.5C45.6046 30 46.5 29.1046 46.5 28V4Z"
                 fill="#CCCCCB"
               />
@@ -297,7 +297,9 @@ export const CarritoAside = ({ active, setActive }: CarritoAsideProps) => {
         <button className="bg-black text-white font-manrope text-xl px-4 py-2 rounded-lg w-[98%] mx-auto">
             Proceder al pago
         </button>
+        <div className="absolute -bottom-10 left-0 right-0 w-full bg-primary-gray blur-sm min-h-[50px]"></div>
       </div>
+      
     </aside>
   );
 };
