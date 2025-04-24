@@ -42,7 +42,7 @@ export const Categories = () => {
         <div className={`flex items-center justify-center gap-x-10 gap-y-8 lg:gap-y-10 lg:gap-x-10 flex-wrap max-w-[1240px]  px-2 py-6 overflow-y-hidden lg:max-h-max lg:overflow-auto mt-10 rounded-lg transition-all shadow-xl`}>
           {categoriesHero.slice(0, categoriesToShow).map((category, index) => (
             <div key={index} className='relative w-[160px] lg:w-[200px] min-h-[160px] lg:min-h-[200px] cursor-pointer rounded-full p-4 shadow-xl flex overflow-hidden items-end group/individualCategory justify-center pb-10'>
-              <img src={category.bgImage} width={120} height={120} alt={category.name} className='absolute inset-0 w-full group-hover/individualCategory:scale-120 h-full object-cover rounded-full transition-transform' />
+              <img src={category.bgImage} loading='lazy' width={120} height={120} alt={category.name} className='absolute inset-0 w-full group-hover/individualCategory:scale-120 h-full object-cover rounded-full transition-transform' />
               <div className='absolute inset-0 z-10 flex items-center justify-center rounded-full w-full h-full bg-black/30'></div>
               <h2 className='text-xl font-manrope z-30 text-center text-white font-bold'>{category.name}</h2>
             </div>

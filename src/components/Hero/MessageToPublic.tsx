@@ -14,11 +14,11 @@ export const MessageToPublic = () => {
     },
     {
       id : 2,
-      src : '/Hero/images/gif-2.webp',
+      src : '/Hero/images/gif-1.webp',
     },
     {
       id : 3,
-      src : '/Hero/images/gif-3.webp',
+      src : '/Hero/images/gif-1.webp',
     },
   ]
 

@@ -15,11 +15,13 @@ export const InputsForUserLogin = ({ type, labelInput, name }: InputForUser) => 
   
   const [isFocused, setIsFocused] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+  const [inputLength, setInputLength] = useState(0)
 
+  
   return (
     
     <div className='flex flex-col items-start justify-center gap-4'>
-    <div className={`blur-[1px] bg-primary-green/20 w-max h-7 px-4 ${isFocused ? "text-transparent" : "text-black"} transition-all rounded-md`}>
+    <div className={`blur-[0px] font-poppins text-sm bg-primary-green/20 w-max h-max py-1 px-4 ${isFocused ? "text-transparent" : "text-black"} transition-all rounded-md`}>
     {labelInput}
     </div>
     <div className='relative flex items-center justify-center w-max h-max '>
@@ -33,12 +35,21 @@ export const InputsForUserLogin = ({ type, labelInput, name }: InputForUser) => 
         }
       }}
         className={`absolute transition-all duration-200 font-poppins ${
-          isFocused ? '-top-10 left-4 text-sm text-black cursor-auto' : 'top-1/2 left-4 text-black/65 cursor-pointer -translate-y-1/2'
+          isFocused ? '-top-10 left-4 text-sm text-black cursor-auto' : inputLength > 0 ? 'top-1/2 left-4 text-black/65 cursor-pointer -translate-y-1/2 opacity-0 -z-10' : 'top-1/2 left-4 text-black/65 cursor-pointer -translate-y-1/2'
         }`}
       >
         {labelInput}
       </label>
       <input
+      ref={inputRef}
+      onChange={(e) => {
+        if(e.target.value.length > 0) {
+          setInputLength(e.target.value.length)
+        }
+        if(e.target.value.length === 0) {
+          setInputLength(0)
+        }
+      }}
         type={type}
         onFocus={() => {
             if(isFocused === false) {

@@ -4,7 +4,7 @@
   --font-aboreto: "Aboreto", serif;
   --font-manrope: "Manrope", serif;
   --font-poppins: "Poppins", serif;
-  --fotn-roboto-mono : "Roboto_mono", serif;
+  --font-roboto-mono : "Roboto_mono", serif;
   --font-amiko: "Amiko", serif;
   --color-primary-gray : #D9D9D9;
   --color-secondary-gray : #676565;
@@ -118,7 +118,6 @@
     align-items: center;
     
   }
-
 
 .cardBackground {
   background: linear-gradient(180deg, #FCFCFC 0%, #E3E3E3 92%, rgba(193, 193, 193, 50%) 100%);

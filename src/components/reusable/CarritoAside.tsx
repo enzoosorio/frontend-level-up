@@ -58,7 +58,7 @@ export const CarritoAside = ({ active, setActive }: CarritoAsideProps) => {
   return (
     <aside
       className={`fixed min-w-[300px] max-w-[450px] top-0 bottom-0 py-10 ${
-        active ? "right-0 z-50" : "-right-[100%] z-0"
+        active ? "right-0 z-50" : "-right-[150%] z-0"
       } transition-all bg-bg-color flex flex-col gap-12  overflow-y-auto`}
     >
       <div className="flex items-center justify-center gap-6 px-4 py-5 rounded-lg bg-gray-secondary w-[80%] mx-auto">
