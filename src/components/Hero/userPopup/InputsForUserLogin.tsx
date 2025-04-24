@@ -5,12 +5,6 @@ type InputForUser = React.InputHTMLAttributes<HTMLInputElement> & {
     labelInput: string  
 }
 
-interface AuxInputProps {
-  labelInput: string
-  typeInput: string
-  nameInput : string
-}
-
 export const InputsForUserLogin = ({ type, labelInput, name }: InputForUser) => {
   
   const [isFocused, setIsFocused] = useState(false)

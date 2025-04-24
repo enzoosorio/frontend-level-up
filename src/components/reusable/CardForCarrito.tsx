@@ -4,14 +4,13 @@ import React from 'react'
 interface CardForCarritoProps {
     productName: string
     category: string
-    slug: string
     link: string
     image: string
     price : number
     quantity : number
 }
 
-export const CardForCarrito = ({productName, category, slug, link, image, price, quantity} : CardForCarritoProps) => {
+export const CardForCarrito = ({productName, category, link, image, price, quantity} : CardForCarritoProps) => {
   return (
     <div className='flex items-center justify-center gap-4 cardBackground  p-6 min-w-[98%] mx-auto h-[200px]'>
         <img src={image} alt={productName} className='w-[90px] h-full object-cover'/>
