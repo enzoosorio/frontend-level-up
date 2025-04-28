@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Aboreto, Manrope, Poppins, Amiko, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/src/components/Hero/Footer";
+import { InfiniteNavbarr } from "../components/reusable/Hero/InfiniteNavbar";
 
 // Define las fuentes
 const aboreto = Aboreto({
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body
         className={`${aboreto.variable} ${amiko.variable} ${poppins.variable} ${manrope.variable} ${roboto_mono.variable} antialiased overflow-x-hidden `}
       >
+        <InfiniteNavbarr/>
         {children}
         <Footer />
       </body>

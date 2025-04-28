@@ -9,7 +9,7 @@ interface OverlayNavbarProps {
 
 export const OverlayNavbar = ({ setToggleHamburger }: OverlayNavbarProps) => {
   return (
-    <div className="pt-40  fixed inset-0 z-50 bg-white/20 backdrop-blur-xs flex flex-col items-center justify-start gap-12  min-h-screen overflow-y-scroll md:overflow-y-hidden">
+    <div className="pt-40  fixed inset-0 z-50 bg-black/30 backdrop-blur-xs flex flex-col items-center justify-start gap-12  min-h-screen overflow-y-scroll md:overflow-y-hidden">
         
         {/* Boton cerrar ABSOLUTE */}
         <button

@@ -7,7 +7,6 @@ import { MessageToPublic } from "@/src/components/Hero/MessageToPublic";
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg-color overflow-x-hidden">
-    <InfiniteNavbarr/>
     <NavbarWithVideo/>
     <Categories/>
     <FeaturedCollections/>

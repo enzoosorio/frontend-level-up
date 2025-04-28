@@ -122,3 +122,36 @@
 .cardBackground {
   background: linear-gradient(180deg, #FCFCFC 0%, #E3E3E3 92%, rgba(193, 193, 193, 50%) 100%);
 }
+
+
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredCollectionCard > div > p {
+    animation: fadeInScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    width: max-content;
+  }
+}
+
+
+.bgImageLastCTA{
+  background-image: url("/Sell/images/landscape-segundo-mensaje.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}

@@ -13,7 +13,7 @@ export const CardFeaturedCollections = ({
 }: CardFeaturedCollectionsProps) => {
   return (
     <div
-      className={`relative transition-all duration-500 ease-in-out group/card cursor-pointer flex items-end 
+      className={`featuredCollectionCard relative transition-all duration-500 ease-in-out group/card cursor-pointer flex items-end 
         overflow-hidden shadow-xl rounded-lg justify-end 
         h-[440px] bg-black/50 col-span-1 md:w-[150px] md:hover:w-[500px] lg:w-[200px]`}
     >
@@ -36,10 +36,10 @@ export const CardFeaturedCollections = ({
             text-white
             ${
               textSpan === "left"
-                ? "-left-10 group-hover/card:left-1/2 group-hover/card:-translate-x-1/2"
-                : "-right-10 group-hover/card:left-1/2 group-hover/card:-translate-x-1/2 "
+                ? "-left-10 md:group-hover/card:left-1/2 md:group-hover/card:-translate-x-1/2"
+                : "-right-10 md:group-hover/card:left-1/2 md:group-hover/card:-translate-x-1/2 "
             }
-            group-hover/card:opacity-100 transition-all opacity-0 
+            md:group-hover/card:opacity-100 transition-all opacity-0 
             text-2xl
             
             font-poppins font-bold`}

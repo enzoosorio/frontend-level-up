@@ -7,7 +7,10 @@ import { SearchBarSectionForNavbar } from "./SearchBarSectionForNavbar";
 import { CarritoAside } from "../reusable/CarritoAside";
 import { UserPopup } from "./userPopup/UserPopup";
 
-export const Navbar = () => {
+interface NavbarProps {
+  className?: string;
+}
+export const Navbar = ({ className }: NavbarProps) => {
   const [toggleHamburger, setToggleHamburger] = useState(false);
   const [showSearchBarSection, setShowSearchBarSection] = useState(false);
   const [showCart, setShowCart] = useState(false);
@@ -15,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="relative items-center justify-around h-[116px] md:h-auto w-full flex gap-8 md:gap-24 xl:gap-64  ">
+      <nav className={`relative items-center justify-around h-[116px] md:h-auto w-full flex gap-8 md:gap-24 xl:gap-64 ${className}`}>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
           {/* hamburger menu */}
           <svg
