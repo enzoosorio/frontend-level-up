@@ -6,6 +6,8 @@ export interface IndividualProduct {
     name: string;
     description: string;
     price: number;
+    condition: string;
+    oldPrice?: number;
     images: string[];
     category: string;
     brand: string;

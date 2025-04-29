@@ -7,12 +7,14 @@ type ImagesProps = {
 
 export const Images = ({ images }: ImagesProps) => {
   return (
-        <aside className='grid grid-cols-4 items-center justify-center gap-4 mt-10'>
-            <div className='relative col-span-4 w-[400px] h-[400px] bg-amber-400 rounded-lg overflow-hidden'/>
-            <div className='relative col-span-2 w-[200px] h-[200px] bg-amber-700 rounded-lg overflow-hidden'/>
-            <div className='relative col-span-2 w-[200px] h-[200px] bg-amber-800 rounded-lg overflow-hidden'/>
-            <div className='relative col-span-2 w-[200px] h-[200px] bg-amber-900 rounded-lg overflow-hidden'/>
-            <div className='relative col-span-2 w-[200px] h-[200px] bg-amber-600 rounded-lg overflow-hidden'/>
+        <aside className='flex flex-col items-center justify-center gap-4 w-[90%] min-w-[440px]'>
+            <div className='relative col-span-4 w-full h-[550px] bg-primary-gray  overflow-hidden'/>
+            <div className='flex flex-row flex-wrap items-center justify-center gap-4 gap-x-4 w-full'>
+            <div className='relative col-span-2 w-[calc(50%-8px)] h-[280px] bg-primary-gray overflow-hidden'/>
+            <div className='relative col-span-2 w-[calc(50%-8px)] h-[280px] bg-primary-gray overflow-hidden'/>
+            <div className='relative col-span-2 w-[calc(50%-8px)] h-[280px] bg-primary-gray overflow-hidden'/>
+            <div className='relative col-span-2 w-[calc(50%-8px)] h-[280px] bg-primary-gray overflow-hidden'/>
+            </div>
         </aside>
   )
 }

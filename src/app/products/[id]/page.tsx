@@ -1,3 +1,4 @@
+import { Navbar } from "@/src/components/Hero/Navbar"
 import { Images } from "@/src/components/IndividualProduct/Images"
 import { ProductContent } from "@/src/components/IndividualProduct/ProductContent"
 import { SectionBlank } from "@/src/components/reusable/SectionBlank"
@@ -21,7 +22,8 @@ export default async function IndividualProductPage({ params }: { params: Params
 
     return(
         <main className="relative min-h-screen bg-bg-color">
-            <SectionBlank className="flex-row">
+            <Navbar/>
+            <SectionBlank className="flex-row items-start px-10 gap-10">
                 <Images/>
                 <ProductContent/>
             </SectionBlank>
