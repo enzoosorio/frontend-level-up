@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useState } from 'react'
+import {useEffect, useState } from 'react'
 
 interface UseIsVisibleRefsProps {
   refs: (HTMLDivElement | null)[]

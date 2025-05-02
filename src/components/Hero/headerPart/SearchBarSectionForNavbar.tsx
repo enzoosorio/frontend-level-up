@@ -1,7 +1,7 @@
 import React from "react";
-import { SearchBar } from "../reusable/Hero/SearchBar";
+import { SearchBar } from "@/src/components/reusable/Hero/SearchBar";
 import Link from "next/link";
-import { LogoLevelUp } from "../reusable/Hero/LogoLevelUp";
+import { LogoLevelUp } from "@/src/components/reusable/Hero/LogoLevelUp";
 
 interface SearchBarSectionForNavbarProps {
   setShowSearchBarSection: React.Dispatch<React.SetStateAction<boolean>>;

@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { OverlayNavbar } from "./OverlayNavbar";
-import { LogoLevelUp } from "../reusable/Hero/LogoLevelUp";
-import { SearchBarSectionForNavbar } from "./SearchBarSectionForNavbar";
-import { CarritoAside } from "../reusable/CarritoAside";
-import { UserPopup } from "./userPopup/UserPopup";
+import { OverlayNavbar } from "@/src/components/Hero/headerPart/OverlayNavbar";
+import { LogoLevelUp } from "@/src/components/reusable/Hero/LogoLevelUp";
+import { SearchBarSectionForNavbar } from "@/src/components/Hero/headerPart/SearchBarSectionForNavbar";
+import { CarritoAside } from "@/src/components/reusable/CarritoAside";
+import { UserPopup } from "@/src/components/Hero/userPopup/UserPopup";
 
 interface NavbarProps {
   className?: string;

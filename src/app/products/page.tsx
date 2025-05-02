@@ -1,4 +1,4 @@
-import { Navbar } from '@/src/components/Hero/Navbar'
+import { Navbar } from '@/src/components/Hero/headerPart/Navbar'
 import { StickyHeader } from '@/src/components/Products/StickyHeader'
 import React from 'react'
 

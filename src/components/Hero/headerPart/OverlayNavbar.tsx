@@ -1,7 +1,7 @@
 import React from "react";
 import { hamburgerCategories } from "@/src/utils/hamburgerCategories";
-import { HamburgerCategoriesCard } from "./HamburgerCategoriesCard";
-import { SearchBar } from "../reusable/Hero/SearchBar";
+import { HamburgerCategoriesCard } from "@/src/components/Hero/headerPart/HamburgerCategoriesCard";
+import { SearchBar } from "@/src/components/reusable/Hero/SearchBar";
 
 interface OverlayNavbarProps {
   setToggleHamburger: React.Dispatch<React.SetStateAction<boolean>>;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Aboreto, Manrope, Poppins, Amiko, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { Footer } from "@/src/components/Hero/Footer";
+import { Footer } from "@/src/components/Hero/footer/Footer";
 import { InfiniteNavbarr } from "../components/reusable/Hero/InfiniteNavbar";
 
 // Define las fuentes

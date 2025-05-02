@@ -54,7 +54,7 @@ export const UserPopup = ({ setActive, active }: UserPopupProps) => {
             setActive(false);
             document.body.style.overflow = 'auto';
           }}
-          className="hidden md:block absolute top-2 text-xl rounded-full right-5 pb-2 border font-bold border-black px-4 py-1 cursor-pointer"
+          className="hidden lg:block absolute top-2 text-xl rounded-full right-5 pb-2 border font-bold border-black px-4 py-1 cursor-pointer"
         >
           x
         </button>
@@ -117,7 +117,7 @@ export const UserPopup = ({ setActive, active }: UserPopupProps) => {
           </form>
         </div>
         <div className="hidden md:flex relative flex-col items-start justify-between gap-10 w-full md:w-[90%] rounded-lg pt-6 pb-8 bg-primary-green text-white min-h-[500px]">
-          <h4 className={`text-4xl font-bold font-roboto-mono uppercase ${userType === "comprador" ? "pl-16 w-full" : "pl-20 w-[90%]"}  `}>
+          <h4 className={`text-2xl lg:text-4xl font-bold font-roboto-mono uppercase ${userType === "comprador" ? "pl-16 w-full" : "pl-20 w-[90%]"}  `}>
             {/* El w-[500px] fija el ancho. Ajusta el número según necesites */}
             <span className="block">{text}</span>
           </h4>
@@ -640,16 +640,16 @@ export const UserPopup = ({ setActive, active }: UserPopupProps) => {
             </svg>)}
             
           </div>
-          <div className="relative flex items-center justify-center gap-4 mx-auto font-poppins  w-full">
+          <div className="relative flex items-center justify-center gap-2 lg:gap-4 mx-auto font-poppins  w-full">
             <button
               onClick={() => handleUserType("comprador")}
-              className={`${userType === "comprador" ? "border border-white text-white bg-transparent" : "border-none bg-white text-primary-green"} rounded-lg shadow-lg hover:shadow-2xl transition-all px-4 py-2 cursor-pointer`}
+              className={`${userType === "comprador" ? "border text-sm lg:text-base border-white text-white bg-transparent" : "border-none bg-white text-primary-green"} rounded-lg shadow-lg w-[120px] lg:w-auto hover:shadow-2xl transition-all px-3 py-1 lg:px-4 lg:py-2 cursor-pointer`}
             >
               Usuario Comprador
             </button>
             <button
               onClick={() => handleUserType("vendedor")}
-              className={`${userType === "vendedor" ? "border border-white text-white bg-transparent" : "border-none bg-white text-primary-green"}  rounded-lg shadow-lg hover:shadow-2xl transition-all px-4 py-2 cursor-pointer`}
+              className={`${userType === "vendedor" ? "border text-sm lg:text-base border-white text-white bg-transparent" : "border-none bg-white text-primary-green"}  rounded-lg shadow-lg w-[120px] lg:w-auto hover:shadow-2xl transition-all px-3 py-1 lg:px-4 lg:py-2 cursor-pointer`}
             >
               Usuario Vendedor
             </button>

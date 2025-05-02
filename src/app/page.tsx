@@ -1,8 +1,8 @@
-import { InfiniteNavbarr } from "@/src/components/reusable/Hero/InfiniteNavbar";
-import { NavbarWithVideo } from "@/src/components/Hero/NavbarWithVideo";
+import { NavbarWithVideo } from "@/src/components/Hero/headerPart/NavbarWithVideo";
 import { Categories } from "@/src/components/Hero/Categories";
 import { FeaturedCollections } from "@/src/components/Hero/FeaturedCollections";
 import { MessageToPublic } from "@/src/components/Hero/MessageToPublic";
+import { MoreCategories } from "@/src/components/Hero/moreCategories/MoreCategories";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
     <NavbarWithVideo/>
     <Categories/>
     <FeaturedCollections/>
+    <MoreCategories/>
     <MessageToPublic/>
     </main>
   );
